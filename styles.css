@@ -1,0 +1,969 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #d4a017;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #b88b14;
+}
+
+.about {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.products {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative; /* For background overlay */
+    background: url('https://i.ibb.co/TD2RsxVh/brass-lamp.jpg') center center/cover no-repeat; /* Background image */
+    background-attachment: fixed; /* Optional: Image fixed rahega scrolling ke time */
+}
+
+.products::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent black overlay (50% opacity) */
+    z-index: 1; /* Overlay background image ke upar, lekin content ke niche */
+}
+
+.products * {
+    position: relative; /* Content overlay ke upar rahega */
+    z-index: 2; /* Content ko overlay ke upar rakhega */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background: #fff; /* White background for cards to stand out */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visibility */
+}
+
+.product-card img {
+    width: 100%; /* Image card ki puri width lega */
+    max-width: 250px; /* Max width limit for consistency */
+    max-height: 200px; /* Height for larger images */
+    height: auto; /* Aspect ratio maintain rahega */
+    object-fit: cover; /* Image card ke space ko fill karega */
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    height: 100px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn {
+    background: #d4a017;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #b88b14;
+}
+
+.more-items-btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: #8b5a2b; /* Different color for distinction */
+    border-radius: 25px;
+    transition: transform 0.2s;
+}
+
+.more-items-btn:hover {
+    background: #6b4a1b;
+    transform: scale(1.05);
+}
+
+.products {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.more-items-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f5e8c7 0%, #d4a017 100%); /* Gradient background */
+}
+
+.more-items-section h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.more-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.more-items-card {
+    border: 2px solid #d4a017;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.more-items-card:hover {
+    transform: translateY(-5px);
+}
+
+.more-items-card img {
+    width: 100%;
+    max-width: 280px;
+    max-height: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif; /* Poppins font as default */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #d4a017;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #b88b14;
+}
+
+.more-items-btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: linear-gradient(45deg, #d4a017, #8b5a2b); /* Gradient button */
+    border-radius: 30px;
+    padding: 12px 25px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.more-items-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.more-items-btn:active {
+    transform: scale(0.95); /* Click effect */
+}
+
+.products {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.more-items-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f5e8c7 0%, #d4a017 70%); /* Metallic gradient */
+    position: relative;
+    overflow: hidden;
+}
+
+.more-items-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.ibb.co/TD2RsxVh/brass-lamp.jpg') center/cover no-repeat;
+    opacity: 0.1; /* Subtle background image */
+    z-index: 0;
+}
+
+.more-items-section h2 {
+    color: #2b2b2b;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.more-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larger cards */
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.more-items-card {
+    background: #fff;
+    border: 3px solid #d4a017; /* Golden border */
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.more-items-card:hover {
+    transform: translateY(-10px) rotate(2deg); /* Tilt and lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.more-items-card img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.more-items-card:hover img {
+    transform: scale(1.05); /* Image zoom on hover */
+}
+
+.more-items-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0;
+}
+
+.more-items-card p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.more-items-card .more-items-btn {
+    background: linear-gradient(45deg, #d4a017, #8b5a2b);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.more-items-card .more-items-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.more-items-card .more-items-btn:active {
+    transform: scale(0.95);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333; /* Darker header */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1); /* Logo ko light banane ke liye */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #4a2c07; /* Dark golden button */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #8b5a2b; /* Border for depth */
+}
+
+.btn:hover {
+    background-color: #8b5a2b; /* Hover effect */
+}
+
+.products {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #2a2a2a; /* Dark card background */
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    filter: brightness(1.1); /* Image ko thoda bright */
+}
+
+.more-items-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #222; /* Dark section */
+    color: #e0e0e0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333; /* Darker header */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1); /* Logo ko light */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #4a2c07; /* Dark golden button */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #8b5a2b;
+}
+
+.btn:hover {
+    background-color: #8b5a2b; /* Hover effect */
+}
+
+.products {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #2a2a2a; /* Dark card */
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    filter: brightness(1.1);
+}
+
+.more-items-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+h2 {
+    font-size: 2.5em; /* Bada text */
+    font-weight: 700; /* Bold */
+    color: #d4a017; /* Golden color */
+    text-transform: uppercase; /* Sab capital */
+    letter-spacing: 2px; /* Thoda space */
+    margin-bottom: 20px;
+    position: relative; /* Animation ke liye */
+}
+
+h2::after {
+    content: ""; /* Pseudo-element */
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #d4a017;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease; /* Animation */
+}
+
+h2:hover::after {
+    width: 100px; /* Hover pe bada */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif; /* Vintage font */
+}
+
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333; /* Darker header */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    max-height: 60px;
+    width: auto;
+    display: block;
+    filter: sepia(0.5) brightness(1.2); /* Vintage effect on logo */
+}
+
+.logo-text {
+    font-family: 'Georgia', serif; /* Vintage font */
+    font-size: 1.8em; /* Bada text */
+    font-weight: 700; /* Bold */
+    color: #d4a017; /* Golden color */
+    text-transform: uppercase; /* Capital letters */
+    letter-spacing: 2px; /* Space for style */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+    position: relative;
+}
+
+.logo-text::after {
+    content: ""; /* Underline effect */
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background-color: #8b5a2b;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #4a2c07; /* Dark golden button */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #8b5a2b;
+}
+
+.btn:hover {
+    background-color: #8b5a2b; /* Hover effect */
+}
+
+.products {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #2a2a2a; /* Dark card */
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    filter: sepia(0.3) brightness(1.1); /* Vintage image effect */
+}
+
+.product-card h3 {
+    color: #d4a017; /* Golden headings */
+}
+
+.more-items-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+h2 {
+    font-size: 2.5em; /* Bada headline */
+    font-weight: 700;
+    color: #d4a017;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    width:

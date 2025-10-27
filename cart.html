@@ -1,24 +1,9 @@
-<a href="more-items.html" class="btn more-items-btn">More Items</a>
-<a href="pages/more-items.html" class="btn more-items-btn">More Items</a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Items</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>More Items Page</h1>
-</body>
-</html>
-<a href="pages/more-items.html" class="btn more-items-btn">More Items</a>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Items - Decoworld Trade Linkers</title>
+    <title>Cart - Decoworld Trade Linkers</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,13 +16,30 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="btn">Cart</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="more-items-section">
-        <h2>More Handcrafted Items</h2>
-        <p>This is the More Items page. Add your products here!</p>
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+        <div class="cart-items">
+            <!-- Example Item - Yeh dynamic banega jab JavaScript add karenge -->
+            <div class="cart-item">
+                <img src="https://i.ibb.co/TD2RsxVh/brass-lamp.jpg" alt="Brass Lamp">
+                <div class="item-details">
+                    <h3>Brass Lamp</h3>
+                    <p>Price: ₹1500</p>
+                    <p>Quantity: 1</p>
+                    <button class="btn remove-btn">Remove</button>
+                </div>
+            </div>
+            <!-- Aur items yahan add honge -->
+        </div>
+        <div class="cart-total">
+            <h3>Total: ₹1500</h3>
+            <a href="checkout.html" class="btn checkout-btn">Proceed to Checkout</a>
+        </div>
     </section>
 
     <footer>

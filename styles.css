@@ -967,3 +967,126 @@ h2::after {
     content: "";
     position: absolute;
     width:
+    /* Pehle ka code waisa hi rakho, yeh add karo */
+
+.cart-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.cart-items {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+    filter: sepia(0.3) brightness(1.1);
+}
+
+.item-details {
+    text-align: left;
+}
+
+.item-details h3 {
+    color: #d4a017;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    color: #bbb;
+    margin: 5px 0;
+}
+
+.remove-btn {
+    background-color: #8b5a2b;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #6f4720;
+}
+
+.cart-total {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.cart-total h3 {
+    color: #d4a017;
+    margin-bottom: 10px;
+}
+
+.checkout-btn {
+    background-color: #4a2c07;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid #8b5a2b;
+}
+
+.checkout-btn:hover {
+    background-color: #8b5a2b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cart-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .item-details {
+        text-align: center;
+    }
+}
+.shop-now-btn {
+    background-color: #4a2c07;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    border: 2px solid #8b5a2b;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+    transform: scale(1.1);
+    background-color: #8b5a2b;
+}
+
+#products {
+    scroll-margin-top: 70px; /* Header ke liye space */
+}
